@@ -15,15 +15,15 @@
     "ui/LUCIDE_LICENSE.txt": "69ba28760c9e2f322f765f114750d5b38a82057f74054c775387d7be91be3e17"
   },
   "site_sources": {
-    "tools/menu-playground/embed.css": "07553144556101a658e9e35178888087d0876b1b1054fc8974627ac7597969b6",
+    "tools/menu-playground/embed.css": "fa5c85ed9698b453f45230183483216c3d453a33467b6cc80b3ce28fc39f1d3c",
     "tools/menu-playground/trainer-demo.js": "a1b1e4dd90bcdc4f55e3ef73344df545a10f3f2507ef2927379ed27ee289dd68",
-    "tools/menu-playground/pre.js": "c05a5244fdd9a9a427ebe90dd6d6f4394447066036ba13a0e76504e2b34896ea",
-    "tools/menu-playground/post.js": "a78e2e312169e52f0c8065439f16c92d9918bf429975e05277989bebbb324159",
+    "tools/menu-playground/pre.js": "d0317b62c5ed00cbda7270ec8ccebb5dfb91c70c82c04b342fa7727c26a077c8",
+    "tools/menu-playground/post.js": "fbd487686e8886cb07f091517110d3190acb89d6ff0bcdb26f14f5eeb8ac5c1f",
     "src/lib/naim-theme.ts": "5aad3adf936328ecf02ff6c912c7dd4d55c855e2909be4b1bcc361696f414f32",
     "src/lib/reseller-menu-preview.ts": "9b619d120e09793db965bb6c4843ea550a8780c5f1b17700c85f7caa569d592c",
     "src/lib/reseller-palette.ts": "14de7a5f3dcc1761d5c9bec7288df29cf81cdef843eb951cb267858a3574a05c",
     "src/lib/reseller-logo-draft.ts": "e30d5793278e7989128eff3217e8b5fd58463b9929479c196e95e8e3fc8fb426",
-    "tools/sync-menu-playground.mjs": "24332e1becb4b3b776a8bf97705e42c3637fac43f8ff65fc8e864623a55985da",
+    "tools/sync-menu-playground.mjs": "c260d750e3a2118f9668bb1c116fd7b5b97c0febbb984c126099e74573593fc8",
     "tools/menu-playground/vision-copy.json": "3585488dc169b6f687ddffe555c4c9bdcda8c924b15324229d0097194bdbac12",
     "tools/menu-playground/object-target.svg": "4adee4d9760e112ce54f85a03b28e789600a6088523e5ea5a38ebfcfc740e63e",
     "public/favicon.svg": "f92fd5ce8c8fd447f8f9b64b6907cda3a68f132640cf2fe2665d2e7238027cfd",
@@ -37,18 +37,18 @@
     "esbuild": "0.25.12"
   },
   "generated": {
-    "index.html": "788b3641da5b31b8b82272b062118005e91344591b043a8235e708da6ca5e3dc",
+    "index.html": "ba25ca8412f1c1c249bca2d4b5cf46c6f8b5e4e2b7ce168e87348e7f1a578c6d",
     "style.css": "e80ccbedaa39a7b3655fa5d5c24d737dc04c73af6b642c6e9d1b50933094c09d",
-    "embed.css": "c652ccc590acc307dbea37f8200d8353dd80a0f792ff4f2b815e1e7476275aed",
+    "embed.css": "5a2f541b4d5d49818a618ddd0fb6ebb9b9b02230a4fd9cca1828acd6d3c30bda",
     "renderer.js": "33ebf4e55756191f0647640bec001a213dd89d33e3e77ca253516d1031c13fe6",
-    "pre.js": "25c71691025c5ade096c2be6010f5315374b6d9a03cb000b84e0094da72b5038",
-    "post.js": "1d69bd3e66629a6a31a41c78d9bd9089d39f9245bf056f2e4b02723a75de2d70",
+    "pre.js": "d56176068d823382c6ad069ab6c9522e8cddfeace608605ec78b6531c466344a",
+    "post.js": "259c52c12283d067e358f62d87395a63f11cb027e8ba617845179509946d7e7d",
     "theme-codec.js": "69c0893472ad6d3c6572fd8ec1c99eaae1e426cbbf113a66e8752f5ea73eff31",
     "i18n.js": "7cbfc65483c4279520d82d22d8b86d3e2b4c3782b66af9660382610178476aef",
     "i18n_ru.js": "9b3f423ba9e00e49d895c682a81d133c6da03a0f2c5180f5159ba6540ed02394",
     "i18n_zh.js": "c9867e756fac72536015f22ffe4a89e3e373f6b793e77adf9e3dd3fa66ca7221",
     "LUCIDE_LICENSE.txt": "69ba28760c9e2f322f765f114750d5b38a82057f74054c775387d7be91be3e17",
-    "src/generated/menu-preview-revision.ts": "4b65c3cd3562345e51c3027020fab5c4caa6296ab6d5f515db99fbafb054defe"
+    "src/generated/menu-preview-revision.ts": "6c789a0bc6098cf061f492f7e95dba7332a414610f6b10e7c03be7c8e0a30be1"
   },
-  "revision": "072ea93b1f452fa0e063ed1eb3bbb1c71c8192d7083f85324855e2a0aa631940"
+  "revision": "d316cc70548207b9b428ac5b94e0a2bfecebc9dcd5b08a344902538bd279ba08"
 }
