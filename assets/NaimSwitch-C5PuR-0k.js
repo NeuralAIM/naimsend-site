@@ -1,1 +1,0 @@
-import{j as i}from"./index-CgQGP0aN.js";/* empty css                             */function r({children:s,className:t="",...a}){return i.jsxs("label",{className:`naim-switch napi-native-toggle ${t}`.trim(),children:[i.jsx("input",{...a,type:"checkbox",role:"switch"}),i.jsx("i",{"aria-hidden":"true"}),i.jsx("span",{className:"naim-switch__label",children:s})]})}export{r as N};
