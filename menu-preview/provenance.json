@@ -1,0 +1,54 @@
+{
+  "format": 2,
+  "description": "Static cosmetic NAIM menu; no native bridge, account, API requests, durable storage or file actions. Hover media uses only the existing /files/NAIM.mp4. The separate reseller preview may load validated public reseller-logo SVG paths without credentials or a bounded, revalidated SVG image draft in memory.",
+  "sources": {
+    "ui/index.html": "b6c195a3bb0adc13b66e5dad6f60927762e81938b576ba7b8e0864931c71b4f3",
+    "ui/style.css": "66105616d3e7386b8d4c872e6a624068b70253ff97bd3f59bdf7116c7241ae6e",
+    "ui/renderer.js": "1b8a495cc3c015a85f1e4b651da7e40965120cec25a96473acf7622e240cff03",
+    "ui/assets/tutorial-target.webp": "a13d7d32d9cc231aca5a0b8bc06590599aa761366ac369cfd4dc50fccf28d722",
+    "loader/Ubuntu-Regular.ttf": "540f19be11a368130641d00ec1c354b535c0803560f598d7d062486c9278387a",
+    "loader/Ubuntu-Medium.ttf": "0d685f51c3bc394f02c8c218565ba423972cfb35c2542871e0a4ac0c3a0c16a6",
+    "loader/Ubuntu-Bold.ttf": "6dbcce3fdd846f3aebc7e1890b5ccca234806cbd84763785f7ced043a99e8268",
+    "ui/translations/i18n.js": "c05f921de48bccac1d8ade2f9f1af3a0cd2fe40547bc87c4f834098e011a6d33",
+    "ui/translations/i18n_catalog.js": "63e5ac9301f2fde84ce9fcfd309cbf103c7dbe7c606c22a1da0311f3d0ea4bc2",
+    "ui/translations/i18n_manual.js": "2f2772d054bd91ffe198a09d848e08197e0b9d49bd04087449aae44f822a7581",
+    "ui/LUCIDE_LICENSE.txt": "69ba28760c9e2f322f765f114750d5b38a82057f74054c775387d7be91be3e17"
+  },
+  "site_sources": {
+    "tools/menu-playground/embed.css": "07553144556101a658e9e35178888087d0876b1b1054fc8974627ac7597969b6",
+    "tools/menu-playground/trainer-demo.js": "a1b1e4dd90bcdc4f55e3ef73344df545a10f3f2507ef2927379ed27ee289dd68",
+    "tools/menu-playground/pre.js": "c05a5244fdd9a9a427ebe90dd6d6f4394447066036ba13a0e76504e2b34896ea",
+    "tools/menu-playground/post.js": "a78e2e312169e52f0c8065439f16c92d9918bf429975e05277989bebbb324159",
+    "src/lib/naim-theme.ts": "5aad3adf936328ecf02ff6c912c7dd4d55c855e2909be4b1bcc361696f414f32",
+    "src/lib/reseller-menu-preview.ts": "9b619d120e09793db965bb6c4843ea550a8780c5f1b17700c85f7caa569d592c",
+    "src/lib/reseller-palette.ts": "14de7a5f3dcc1761d5c9bec7288df29cf81cdef843eb951cb267858a3574a05c",
+    "src/lib/reseller-logo-draft.ts": "e30d5793278e7989128eff3217e8b5fd58463b9929479c196e95e8e3fc8fb426",
+    "tools/sync-menu-playground.mjs": "24332e1becb4b3b776a8bf97705e42c3637fac43f8ff65fc8e864623a55985da",
+    "tools/menu-playground/vision-copy.json": "3585488dc169b6f687ddffe555c4c9bdcda8c924b15324229d0097194bdbac12",
+    "tools/menu-playground/object-target.svg": "4adee4d9760e112ce54f85a03b28e789600a6088523e5ea5a38ebfcfc740e63e",
+    "public/favicon.svg": "f92fd5ce8c8fd447f8f9b64b6907cda3a68f132640cf2fe2665d2e7238027cfd",
+    "tools/fonts/woff2.json": "460e149d4891a5af25c2e6217a3445e52a4234edf61c8b41e8e625a8b31e5a7b",
+    "public/fonts/Ubuntu-Regular.woff2": "89a1218d283b42c3f6facb6ab04eb0beb11ab1064f55e9b80fee895100c8e21b",
+    "public/fonts/Ubuntu-Medium.woff2": "5eaee3ad6bf1919ed33d5fa334ba337fdaa140f351c2aa98dc74f97dad657e34",
+    "public/fonts/Ubuntu-Bold.woff2": "6d89e929851370d3eefb217613814cdd9d31f8af7af2682a9a563617b075d0e2"
+  },
+  "toolchain": {
+    "typescript": "5.9.3",
+    "esbuild": "0.25.12"
+  },
+  "generated": {
+    "index.html": "788b3641da5b31b8b82272b062118005e91344591b043a8235e708da6ca5e3dc",
+    "style.css": "e80ccbedaa39a7b3655fa5d5c24d737dc04c73af6b642c6e9d1b50933094c09d",
+    "embed.css": "c652ccc590acc307dbea37f8200d8353dd80a0f792ff4f2b815e1e7476275aed",
+    "renderer.js": "33ebf4e55756191f0647640bec001a213dd89d33e3e77ca253516d1031c13fe6",
+    "pre.js": "25c71691025c5ade096c2be6010f5315374b6d9a03cb000b84e0094da72b5038",
+    "post.js": "1d69bd3e66629a6a31a41c78d9bd9089d39f9245bf056f2e4b02723a75de2d70",
+    "theme-codec.js": "69c0893472ad6d3c6572fd8ec1c99eaae1e426cbbf113a66e8752f5ea73eff31",
+    "i18n.js": "7cbfc65483c4279520d82d22d8b86d3e2b4c3782b66af9660382610178476aef",
+    "i18n_ru.js": "9b3f423ba9e00e49d895c682a81d133c6da03a0f2c5180f5159ba6540ed02394",
+    "i18n_zh.js": "c9867e756fac72536015f22ffe4a89e3e373f6b793e77adf9e3dd3fa66ca7221",
+    "LUCIDE_LICENSE.txt": "69ba28760c9e2f322f765f114750d5b38a82057f74054c775387d7be91be3e17",
+    "src/generated/menu-preview-revision.ts": "4b65c3cd3562345e51c3027020fab5c4caa6296ab6d5f515db99fbafb054defe"
+  },
+  "revision": "072ea93b1f452fa0e063ed1eb3bbb1c71c8192d7083f85324855e2a0aa631940"
+}

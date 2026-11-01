@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (() => {
+        const referralStorageKey = "naim-payment-referral";
+        const referralParamNames = ["ref", "referral", "r"];
+        const normalizeReferral = (value) => (
+          (value || "")
+            .trim()
+            .replace(/\s+/g, "_")
+            .replace(/[^0-9A-Za-zА-Яа-яЁё_.:@+-]/g, "")
+            .slice(0, 64)
+        );
+
+        const redirectedPath = window.sessionStorage.getItem("naim-spa-redirect");
+        if (redirectedPath) {
+          window.sessionStorage.removeItem("naim-spa-redirect");
+          const currentLocation = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+          if (redirectedPath !== currentLocation) {
+            window.history.replaceState(null, "", redirectedPath);
+          }
+        }
+
+        const query = new URLSearchParams(window.location.search);
+        let hasReferralParam = false;
+        let referral = "";
+
+        referralParamNames.forEach((name) => {
+          if (!query.has(name)) {
+            return;
+          }
+
+          hasReferralParam = true;
+          referral ||= normalizeReferral(query.get(name));
+          query.delete(name);
+        });
+
+        if (!hasReferralParam) {
+          return;
+        }
+
+        if (referral) {
+          try {
+            window.localStorage.setItem(referralStorageKey, referral);
+          } catch {
+            // Ignore storage restrictions: URL cleanup should still happen.
+          }
+        }
+
+        const cleanSearch = query.toString();
+        window.history.replaceState(
+          window.history.state,
+          "",
+          `${window.location.pathname}${cleanSearch ? `?${cleanSearch}` : ""}${window.location.hash}`,
+        );
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108396053', 'ym');
+
+      ym(108396053, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <!-- /Yandex.Metrika counter -->
+    <title>oper — распознавание объектов и автоматизация</title>
+    <meta
+      name="description"
+      content="Распознавание объектов, совместимые сторонние модели и автоматизация процессов компании через NAPI, Python и Lua."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#101112" />
+    <meta name="application-name" content="oper" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="canonical" href="https://oper.pw/" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="oper" />
+    <meta property="og:title" content="oper — распознавание объектов и автоматизация" />
+    <meta property="og:description" content="Распознавание объектов, совместимые сторонние модели и автоматизация процессов компании через NAPI, Python и Lua." />
+    <meta property="og:url" content="https://oper.pw/" />
+    <meta property="og:image" content="https://oper.pw/files/brand/social-preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="oper V4 — логотип на тёмном фоне" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="oper — распознавание объектов и автоматизация" />
+    <meta name="twitter:description" content="Распознавание объектов, совместимые сторонние модели и автоматизация процессов компании через NAPI, Python и Lua." />
+    <meta name="twitter:image" content="https://oper.pw/files/brand/social-preview.png" />
+    <meta name="twitter:image:alt" content="oper V4 — логотип на тёмном фоне" />
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="120x120" href="/favicon-120x120.png" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <!-- The three weights every first screen uses: fetched with the page, not
+         after the style sheet has been read, so text does not change face. -->
+    <link rel="preload" href="/fonts/Ubuntu-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Ubuntu-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Ubuntu-Bold.woff2" as="font" type="font/woff2" crossorigin />
+    <script type="application/ld+json" data-seo-script="page">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://oper.pw#organization",
+      "name": "oper",
+      "url": "https://oper.pw",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://oper.pw/files/brand/logo-512.png",
+        "contentUrl": "https://oper.pw/files/brand/logo-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://oper.pw/files/brand/social-preview.png",
+      "sameAs": [
+        "https://t.me/helpnaimbot"
+      ],
+      "email": "neuralteam@mail.ru",
+      "legalName": "ИП \"Кузнецов Игорь Андреевич\"",
+      "taxID": "519052879702",
+      "identifier": "325320000000505",
+      "address": "г. Брянск, ул. Камозина, д. 25"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://oper.pw#website",
+      "url": "https://oper.pw",
+      "name": "oper",
+      "description": "Распознавание объектов, совместимые сторонние модели и автоматизация процессов компании через NAPI, Python и Lua.",
+      "inLanguage": "ru",
+      "publisher": {
+        "@id": "https://oper.pw#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://oper.pw/#webpage",
+      "url": "https://oper.pw/",
+      "name": "oper — распознавание объектов и автоматизация",
+      "description": "Распознавание объектов, совместимые сторонние модели и автоматизация процессов компании через NAPI, Python и Lua.",
+      "inLanguage": "ru",
+      "isPartOf": {
+        "@id": "https://oper.pw#website"
+      },
+      "about": {
+        "@id": "https://oper.pw#organization"
+      },
+      "primaryImageOfPage": "https://oper.pw/files/brand/social-preview.png"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://oper.pw/#software",
+      "name": "oper",
+      "url": "https://oper.pw/",
+      "description": "Распознавание объектов, совместимые сторонние модели и автоматизация процессов компании через NAPI, Python и Lua.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows 10+",
+      "softwareVersion": "4",
+      "image": "https://oper.pw/files/brand/social-preview.png",
+      "publisher": {
+        "@id": "https://oper.pw#organization"
+      }
+    }
+  ]
+}
+</script>
+    <script type="module" crossorigin src="/assets/index-DnAS3EwB.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DUN2eV01.css">
+  </head>
+  <body>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108396053" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <div id="root"></div>
+  </body>
+</html>
