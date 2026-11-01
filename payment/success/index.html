@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><title>Результат оплаты</title>
+<style>html{color-scheme:dark;background:#101112;color:#eef0f3;font:16px/1.55 system-ui,sans-serif}body{margin:0;min-height:100vh;display:grid;place-items:center}main{max-width:480px;margin:24px;padding:28px;border:1px solid #ffffff22;border-radius:20px;background:#ffffff09}h1{font-size:24px}a{color:#9acbff}</style>
+</head><body><main><h1 id="title">Возвращаем к результату оплаты…</h1><p id="body">Статус заказа и ключ будут проверены на основном сайте.</p><a id="link" href="https://neuralaim.ru/payment">Вернуться на основной сайт</a></main>
+<script>
+(()=>{
+ const query=new URLSearchParams(location.search),order=query.get('order_id')||query.get('OrderId')||query.get('orderId')||'';
+ const lang=(navigator.language||'ru').toLowerCase(),en=lang.startsWith('en'),zh=lang.startsWith('zh');
+ document.documentElement.lang=en?'en':zh?'zh':'ru';
+ document.getElementById('title').textContent=en?'Returning to payment details…':zh?'正在返回付款详情…':'Возвращаем к результату оплаты…';
+ document.getElementById('body').textContent=en?'The main website will verify the order status and access key.':zh?'主网站将验证订单状态和访问密钥。':'Статус заказа и ключ будут проверены на основном сайте.';
+ document.getElementById('link').textContent=en?'Return to the main website':zh?'返回主网站':'Вернуться на основной сайт';
+ if(!/^oper_(?:demo|live)_[A-Za-z0-9_-]{12,64}$/.test(order)){
+   document.getElementById('title').textContent=en?'Order number not found':zh?'未找到订单号':'Не найден номер заказа';return;
+ }
+ const url=new URL('/', 'https://neuralaim.ru');
+ url.searchParams.set('payment_success','1');url.searchParams.set('order_id',order);url.searchParams.set('via','oper');
+ document.getElementById('link').href=url.href;location.replace(url.href);
+})();
+</script></body></html>

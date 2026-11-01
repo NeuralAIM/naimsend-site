@@ -9,6 +9,10 @@
     <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
     <script>
       (() => {
+        if (/^\/payment\/success\/?$/.test(location.pathname)) {
+          location.replace('/payment/success/' + location.search);
+          return;
+        }
         const redirectPath = `${window.location.pathname}${window.location.search}${window.location.hash}`;
         window.sessionStorage.setItem("naim-spa-redirect", redirectPath);
         window.location.replace("/");
